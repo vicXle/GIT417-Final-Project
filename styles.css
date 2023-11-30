@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Rubik+Bubbles&display=swap');
+
+:root {
+    --head-font: 'Rubik Bubbles', sans-serif;
+    --text-font: 'Fuzzy Bubbles', sans-serif;
+    --pink: #F2B5D4;
+    --light-pink: #F7D6E0;
+    --dark-pink: #791547;
+    --white: #EFF7F6;
+    --green: #B2F7EF;
+    --blue: #7BDFF2;
+    --black: #041F25;
+}
+
+body {
+    background-color: #EFF7F6;
+background-image:  linear-gradient(#F7D6E0 1.2000000000000002px, transparent 1.2000000000000002px), linear-gradient(to right, #F7D6E0 1.2000000000000002px, #EFF7F6 1.2000000000000002px);
+background-size: 24px 24px;
+max-width: 1280px;
+}
+
+main, header {
+    margin: 0 70px;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+}
+
+h2 {
+    font-family: var(--head-font);
+    color: var(--pink);
+    font-size: 3rem;
+    width: 30vw;
+}
+
+p {
+    font-family: var(--text-font);
+    color: var(--black);
+}
+
+/* ////////////////////////////////////////////////// */
+
+/* header styles */
+
+h1 {
+    font-family: var(--head-font);
+    font-size: 5rem;
+    width: 40vw;
+    color: var(--pink);
+}
+
+nav ul{
+    display: flex;
+    width: 50vw;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    position: fixed;
+    z-index: 3;
+}
+
+nav ul a {
+    text-decoration: none;
+    font-family: var(--text-font);
+    font-weight: bold;
+    color: var(--pink);
+    font-size: 1.5rem;
+}
+
+nav ul li:hover {
+    transition: all 1s;
+    transform: scale(1.5,1.5);
+}
+
+h1 + p {
+    width: 40vw;
+    order: 3;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 200px;
+}
+
+#darkLight:hover {
+    cursor: pointer;
+}
+
+
+/* ////////////////////////////////////////////////// */
+
+/* cart styles */
+#cart {
+    width: 40vw;
+    background-color: var(--light-pink);
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 4;
+    justify-content: space-between;
+}
+
+#exit {
+    font-family: var(--head-font);
+    color: var(--pink);
+    font-size: 3rem;
+}
+
+#exit:hover {
+    cursor: pointer;
+    color: var(--blue);
+    transition: all 1s;
+}
+
+#checkout {
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 150px;
+    height: 50px
+}
+
+
+/* ////////////////////////////////////////////////// */
+
+/* shop styles */
+
+#shop {
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    filter: drop-shadow(0 0 0.75rem var(--light-pink));
+}
+
+img:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 0.75rem var(--blue));
+    transition: all 2s;
+    transform: scale(2,2);
+}
+
+#shop button {
+    font-size: 1rem;
+    padding: 15px;
+    width: 200px;
+}
+
+#shop section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 90px;
+}
+
+h3 {
+    font-family: var(--text-font);
+    font-weight: bold;
+    background-color: var(--light-pink);
+    width: 200px;
+    color: var(--black);
+}
+
+#shop p {
+    max-width: 40vw;
+}
+
+#shop ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#shop a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: var(--head-font);
+    font-weight: bold;
+    color: var(--pink);
+    margin: 70px 30px 0 30px;
+}
+
+#shop a:hover {
+    cursor: pointer;
+    transition: all 1s;
+    color: var(--blue);
+}
+
+
+/* ////////////////////////////////////////////////// */
+
+/* contest styles */
+
+#contest {
+    margin-bottom: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+#contest p {
+    font-size: 2rem;
+}
+
+button {
+    background-color: var(--pink);
+    border: none;
+    border-radius: 70px;
+    padding: 30px;
+    width: 280px;
+    font-family: var(--head-font);
+    color: var(--white);
+    text-align: center;
+    font-size: 2.5rem;
+    filter: drop-shadow(-10px 10px 2px var(--blue));
+    grid-column: 1/2;
+}
+
+button:hover {
+    filter: drop-shadow(-5px 5px 2px var(--blue));
+    cursor: pointer;
+}
+
+input[id="rightNum"] {
+    padding: 30px;
+    width: 280px;
+    border-radius: 60px;
+    font-size: 2.5rem;
+    text-align: center;
+    grid-column: 2/2;
+}
+
+#num{
+    font-family: var(--text-font);
+    color: var(--black);
+    font-weight: bold;
+    font-size: 1.8rem;
+    background-color: var(--blue);
+    border-radius: 100px;
+    padding: 30px;
+    grid-column: 2/2;
+}
+
+
+
+/* ////////////////////////////////////////////////// */
+
+/* contact styles */
+
+#contact {
+    display: flex;
+    gap: 20vw;
+    margin-bottom: 100px;
+}
+
+form {
+    width: 30vw;
+    display: grid;
+}
+
+form label {
+    font-family: var(--text-font);
+    color: var(--black);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.astrik {
+    color: var(--pink);
+}
+
+#contact span[class="warning"] {
+    color: var(--dark-pink);
+    font-family: var(--text-font);
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+
+input, textarea {
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    background-color: var(--light-pink);
+    padding: 15px;
+    margin: 10px 0 10px 0;
+    font-family: var(--text-font);
+    color: var(--black);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--dark-pink);
+}
+
+input:focus, textarea:focus {
+    border: none;
+    filter: drop-shadow(0 0 0.30rem var(--blue));
+}
+
+fieldset {
+    border: none;
+    margin: 20px 0 30px 0;
+}
+
+legend {
+    font-family: var(--text-font);
+    font-size: 1rem;;
+}
+fieldset input {
+    margin: 0 10px 0 50px;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="submit"] {
+    width: 150px;
+    border-radius: 50px;
+    justify-self: center;
+    background-color: var(--pink);
+    font-weight: bold;
+    filter: drop-shadow(-8px 8px 2px var(--blue));
+}
+
+input[type="submit"]:hover {
+    filter: drop-shadow(-3px 3px 2px var(--blue));
+}
+
+
+
+/* ////////////////////////////////////////////////// */
+
+/* footer styles */
+
+footer {
+    background-color: var(--pink);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    padding: 80px 0 50px 0;
+    text-align: center;
+}

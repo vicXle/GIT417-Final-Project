@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penny's Plushies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Penny's Plushies</h1>
+        <p>Penny's Plushies is your whimsical wonderland for all things cuddly and cute! Discover a delightful array of huggable companions waiting to bring joy to your life. From soft bears to quirky characters, each plushie is crafted with love and care. Explore our collection and find your perfect fluffy friend at Penny's Plushies today!</p>
+
+        <nav>
+            <ul>
+                <li><a href="#shop">shop</a></li>
+                <li><a href="#contact">contact</a></li>
+                <li><a href="#contest">contest</a></li>
+                <li><a href="#cart" id="cartBtn"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+                </svg></li>
+                <li><a id="darkLight"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-brightness-low-fill" viewBox="0 0 16 16">
+                    <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8.5 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m5-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-11 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9.743-4.036a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m-7.779 7.779a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m7.072 0a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707M3.757 4.464a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707"/>
+                </svg></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cart">
+            <h2>your cart</h2>
+            <a id="exit">X</a>
+            <p id="cartList"> </p>
+            <p id="total">Your cart is currently empty. Fill it up with some squishable plushies!</p>
+
+            <button id="checkout">check out</button>
+        </section>
+
+        <section id="shop">
+            <h2>shop for your favorite plushie!</h2>
+            <section id="1">
+                <img src="images/bear.png" alt="cute white bear with brown embroidered eyes">
+                <div>
+                    <h3>White Rilakkuma</h3>
+                    <p>$40.00<br>Cute white bear plushie from the famous San-X plushie line.</p>
+                    <button class="cartAdd">add to cart</button>
+                </div>
+            </section>
+
+            <section id="2">
+                <img src="images/penguin.png" alt="blue penguin with pink bow tie wearing a pink and white striped dress shirt. also wearing a pink and white hat">
+                <div>
+                    <h3>Tuxedo Sam</h3>
+                    <p>$50.00<br>Squishable blue penguin from the famous Sanrio plushie brand. If you couldn't tell, he's wearing a tuxedo, and his name is Sam.</p>
+                    <button class="cartAdd">add to cart</button>
+                </div>
+            </section>
+
+            <section id="3">
+                <img src="images/possum.png" alt="realistic looking possum plushie">
+                <div>
+                    <h3>Realistic Possum</h3>
+                    <p>$30.00<br>Ever wanted to squish a possum? Here's a realistic possum plushie. Unlike the real thing, it won't bite!</p>
+                    <button class="cartAdd">add to cart</button>
+                </div>
+            </section>
+
+            <section id="4">
+                <img src="images/rat.png" alt="cute gray rat plushie with beady black eyes">
+                <div>
+                    <h3>Rat Plushie</h3>
+                    <p>$20.00<br>Cute rat plushie looking for love ♥</p>
+                    <button class="cartAdd">add to cart</button>
+                </div>
+            </section>
+
+            <section id="5">
+                <img src="images/star.png" alt="green star plushie with human looking eyes and no lips">
+                <div>
+                    <h3>Nice Green Star</h3>
+                    <p>$100.00<br>Beautiful eyes and has a great personality</p>
+                    <button class="cartAdd">add to cart</button>
+                </div>
+            </section>
+
+            <ul>
+                <li><a id="bear">bear</a></li>
+                <li><a id="penguin">penguin</a></li>
+                <li><a id="possum">possum</a></li>
+                <li><a id="rat">rat</a></li>
+                <li><a id="star">star</a></li>
+            </ul>
+        </section>
+
+        <section id="contest">
+            <h2>win your fav plushie!</h2>
+            <p>guess the right number between 1-10</p>
+            <button id="generateButton">generate!</button>
+
+            <input type="number" name="rightNum" id="rightNum">
+
+            <span id="num"></span>
+        </section>
+
+        <section id="contact">
+            <h2>send us a message!</h2>
+            <form id="form">
+                <label for="name">Full Name<span class="astrik">*</span></label>
+                <input type="text" id="name" name="name" placeholder="enter full name">
+                <span class="hide warning"></span>
+
+                <label for="phone">Phone<span class="astrik">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="enter phone number">
+                <span class="hide warning"></span>
+
+                <label for="email">Email<span class="astrik">*</span></label>
+                <input type="email" id="email" name="email" placeholder="enter email address">
+                <span class="hide warning"></span>
+
+                <fieldset>
+                    <legend>Choose your preferred method of contact<span class="astrik">*</span></legend>
+                    
+                    <input type="radio" id="prefPhone" name="prefContact">
+                    <label for="prefPhone">Phone</label>
+
+                    <input type="radio" id="prefEmail" name="prefContact">
+                    <label for="prefEmail">Email</label>
+                    <span class="hide warning" id="radioPref"></span>
+                </fieldset>
+
+                <label for="message">Enter your message<span class="astrik">*</span></label>
+                <textarea id="message" name="message" placeholder="enter your comments" rows="5" cols="40"></textarea>
+                <span class="hide warning"></span>
+
+                <input type="submit" value="submit" id="submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>This website is for academic purposes only.</p>
+        <p><small>Victoria Le</small></p>
+        <p><small>Copyright&copy; 2023</small></p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
